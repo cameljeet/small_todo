@@ -1,19 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro Task Dashboard</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="app">
-        <h2>To-Do & Stats</h2>
+        <div class="header">
+            <h2>Pro Dashboard</h2>
+            <button onclick="toggleDark()">🌓 Mode</button>
+        </div>
+
         <div id="stats">Total: 0 | Done: 0</div>
         
-        <input id="in" placeholder="New task...">
-        <button onclick="add()">Add</button>
+        <div class="input-group">
+            <input id="in" placeholder="Task...">
+            <input type="date" id="date-in">
+            <select id="prio-in">
+                <option value="1">Low</option>
+                <option value="2">Medium</option>
+                <option value="3">High</option>
+            </select>
+            <button onclick="add()">Add</button>
+        </div>
 
-        <div class="filters">
+        <div class="controls">
+            <button onclick="sortTasks('date')">Sort by Date</button>
+            <button onclick="sortTasks('prio')">Sort by Priority</button>
             <button onclick="setFilter('all')">All</button>
-            <button onclick="setFilter('done')">Done</button>
+            <button onclick="setFilter('pending')">Pending</button>
+            <button onclick="setFilter('completed')">Done</button>
         </div>
 
         <ul id="list"></ul>
