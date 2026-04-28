@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <h2>To-Do & Stats</h2>
+        <div id="stats">Total: 0 | Done: 0</div>
+        
+        <input id="in" placeholder="New task...">
+        <button onclick="add()">Add</button>
+
+        <div class="filters">
+            <button onclick="setFilter('all')">All</button>
+            <button onclick="setFilter('done')">Done</button>
+        </div>
+
+        <ul id="list"></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
