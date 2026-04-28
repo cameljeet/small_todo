@@ -1,0 +1,6 @@
+body { font-family: sans-serif; display: flex; justify-content: center; background: #f0f2f5; }
+.app { background: white; padding: 20px; border-radius: 8px; width: 300px; margin-top: 50px; }
+.done { text-decoration: line-through; color: gray; }
+ul { padding: 0; list-style: none; }
+li { display: flex; justify-content: space-between; padding: 5px 0; border-bottom: 1px solid #eee; }
+button { cursor: pointer; margin: 2px; }
